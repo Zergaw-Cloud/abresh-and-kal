@@ -1,0 +1,232 @@
+# Amharic (am) Language Configuration Properties
+
+# Translatable Wedding Characters
+groomName: "አብርሽ"
+brideName: "ቃል"
+weddingDate: "መስከረም 10 ቀን 2019 ዓ.ም"
+weddingDateFormatted: "እሑድ፣ መስከረም 10 ቀን 2019"
+weddingTime: "ከምሽቱ 12:00 ሰዓት ጀምሮ"
+venueName: "ፈለቀ ተካ የሠርግ አዳራሽ"
+venueLocation: "ንፋስ ስልክ ላፍቶ ቴክኒክና ሙያ ስልጠና ኮሌጅ አጠገብ"
+venueDescription: "የሰርግ ስነ-ስርዓታችን እና የእራት ግብዣችን በንፋስ ስልክ በሚገኘው ታሪካዊው ፈለቀ ተካ የሠርግ አዳራሽ።"
+
+# Section Titles Configuration
+sectionConfigs:
+  story:
+    title: "የፍቅር ታሪካችን"
+    subtitle: "ጅማሬያችን"
+  countdown:
+    title: "የቀናት ቆጠራ"
+    subtitle: "“ቃልኪዳን” እስክንገባ ድረስ"
+  videopreview:
+    title: "የፍቅር ታሪካችን በከፊል"
+    subtitle: "የቅድመ-ሰርግ ልዩ ትዝታዎች"
+  savethedate:
+    title: "የግብዣ ወረቀት"
+    subtitle: "መስከረም አስርን ያስውቡልን"
+  timeline:
+    title: "የሰርጉ እለት"
+    subtitle: "የመርሐግብር ሰሌዳ"
+  gallery:
+    title: "የማይረሱ ትዝታዎች"
+    subtitle: "የእኛ ውብ ትዝታዎች"
+  location:
+    title: "ስነ-ስፍራ"
+    subtitle: "ፈለቀ ተካ የሰርግ አዳራሽ (Feleke Teka)"
+  memoryshare:
+    title: "ትዝታዎን ያጋሩ"
+    subtitle: "የቴሌግራም የቀጥታ ትዝታ ማዕከል"
+  guestbook:
+    title: "ምኞትዎን ይጻፉ"
+    subtitle: "የእንግዳ ማስታወሻ መጻፊያ"
+  rsvpform:
+    title: "የግብዣ መቀበያ"
+    subtitle: "እባክዎን ይመዝገቡ"
+
+# Gallery Metadata Translates
+galleryImages:
+  gal-1:
+    title: "ጣፋጭ ፈገግታዎች"
+    description: "አዲስ አበባ፣ ፳፻፲፯ ዓ.ም የተቀረጸ"
+    badge: "ትዝታዎች"
+  gal-2:
+    title: "የጉዞዎቻችን ትዝታ"
+    description: "ልዩ የጉዞ ትዝታዎቻችን"
+    badge: "ጉዞዎች"
+  gal-3:
+    title: "የእጮኝነት የተቀደሰ ኪዳን"
+    description: "ከአድማስ ባሻገር"
+    badge: "የእጮኝነት ጊዜ"
+  gal-4:
+    title: "በጋራ ህይወትን ስንቃኝ"
+    description: "የተፈጥሮ ውበት"
+    badge: "ጉዞዎች"
+  gal-5:
+    title: "ወደ ብሩህ ተስፋችን ስንመለከት"
+    description: "ከአይንህ ስር"
+    badge: "ትዝታዎች"
+  gal-6:
+    title: "ዘላለማዊ ፍቅርና እምነት"
+    description: "የቃልኪዳኑ ቀለበት"
+    badge: "እጮኝነት"
+  gal-7:
+    title: "የዕለት ተዕለት ጣፋጭ ጨዋታ"
+    description: "የጠዋት ፈገግታ"
+    badge: "ትዝታዎች"
+  gal-8:
+    title: "በተራሮች ላይ መሳቅና መጫወት"
+    description: "በእንጦጦ ኮረብቶች ላይ"
+    badge: "ጉዞዎች"
+
+# Parent Blessings Registry Translation
+familyRegistryNotes:
+  parent-1:
+    author: "የሙሽራው አባት ምርቃት"
+    text: "ቃልኪዳንን ወደ ቤተሰባችን በመቀበላችን ታላቅ ደስታ ይሰማናል። ፍቅራችሁ የጽናት፣ የመከባበር እና የዘላቂ በረከት ማረጋገጫ ይሁን።"
+    role: "የአቶ በላይሁን ከስክስ ምርቃት"
+  parent-2:
+    author: "የሙሽራው እናት ምርቃት"
+    text: "ፈጣሪ ቤታችሁን በሰላም፣ በሳቅ እና በምክክር ይባርከው። ልባችሁን በአንድነት አጽኑ፤ ትዳራችሁን በቅንነት እና በሞገስ ገንቡ።"
+    role: "የወይዘሮ አልማዝ አጥላው ምርቃት"
+  parent-3:
+    author: "የሙሽሪት እናት ምርቃት"
+    text: "ልጄ ቃልኪዳን እና አብሩሃሴት ይህንን የተቀደሰ የህይወት ቃልኪዳን ሲገቡ በማየቴ ልቤ በደስታ ይፈሳል። ሁልጊዜም እርስ በርስ እየተከባበራችሁና እየተደጋገፋችሁ በጽናት ቁሙ።"
+    role: "ወ/ሮ አለም ማሞ - ጎርፌ ምርቃት"
+
+# Localized UI Dictionary Translations
+translations:
+  common:
+    and: "እና"
+    saveTheDate: "ቀኑን ያስቀምጡ"
+    areGettingMarried: "የጋብቻ ስነ-ስርዓት"
+    rsvpBtn: "ግብዣውን ይቀበሉ"
+    viewMap: "ካርታ ተመልከት"
+    days: "ቀናት"
+    hours: "ሰዓታት"
+    minutes: "ደቂቃዎች"
+    seconds: "ሰከንዶች"
+    languageSelected: "አማርኛ"
+  hero:
+    storyScroll: "ስለ እኛ"
+    saveDate: "እባኮትን ይህንን እለት ያውቁልን"
+  nav:
+    story: "የእኛ ታሪክ"
+    calendar: "ቀን መቁጠሪያ"
+    timeline: "መርሐግብር"
+    gallery: "የፎቶ ማዕከለ-ስዕላት"
+    location: "ስፍራ"
+    guestbook: "ትዝታዎች"
+    rsvp: "ግብዣ መቀበያ"
+    rsvpQuick: "አሁኑኑ ይመዝገቡ"
+  intro:
+    title: "በፍቅር የታጀበ አሸንዳ"
+    quote: '“አልፎ አልፎ፣ ከተለመደው የኑሮ መስመር መካከል፣ እውነተኛ ፍቅር ህይወትን የተዋበ ተረት ያደርገዋል።”'
+    para1: "እጅግ የምንወዳችሁና የምናከብራችሁ ቤተሰቦቻችንና ወዳጆቻችን፣ የዘላለም ቃልኪዳናችንን ስንፈጽም አብራችሁን እንድትሰነብቱ በታላቅ አክብሮት እንጋብዛለን። አዲሱን የህይወት ምዕራፋችንን ስንጀምር መገኘታችሁ ትልቅ ደስታ ይሆንልናል።"
+    readBtn: "የእኛን ታሪክ ያንብቡ"
+    closeBtn: "ታሪኩን ዝጋ"
+    photo1Caption: "እሺ ያለችበት ያ ውብ ቅጽበት"
+    photo2Caption: "አስደሳች ጉዞ"
+    modalTitle: "የመጀመሪያው መገናኛ እና የጥያቄው ሰዓት"
+    modalBody1: "<strong>እንዴት እንደተገናኘን፦</strong> በአንድ በተጨናነቀ የቡና መሸጫ ካፌ ውስጥ ነበር ለመጀመሪያ ጊዜ የተያየነው። ስህተቱን በሳቅና በቀልድ ከተረዳን በኋላ በዚያኑ እለት ለሰዓታት አውግተናል። ያቺ የሻይና ቡና መደባለቅ የህይወታችን መጀመሪያ ሆነች።"
+    modalBody2: "<strong>የጋብቻ ጥያቄ፦</strong> ጀንበር ሰማዩን ውብ በሆኑ ህብረ ቀለማት ስታስውበው፣ ተንበርክኮ የሚያምረውን ቀለበት አውጥቶ የህይወቷ አጋር እንድትሆን ጠየቃት። እሷም በደስታና በእንባ ታጅባ “መቶ ሺህ ጊዜ እሺ!” አለችው።"
+    modalFooter: "“እንግዲህ የህይወት ዘመን ጉዞ በይፋ ተጀመረ።”"
+  countdown:
+    heading: '“ቃልኪዳን” እስክንገባ ድረስ'
+    headingHappilyMarried: "በጋብቻ የታጀበ ጣፋጭ ፍቅር ለ"
+    label: "የቀናት ቆጠራ"
+    days: "ቀናት"
+    hours: "ሰዓታት"
+    minutes: "ደቂቃዎች"
+    seconds: "ሰከንዶች"
+  videoPreview:
+    label: "የፍቅር ጉዟችን በከፊል"
+    title: "የቅድመ-ሰርግ ልዩ ትዝታዎች"
+    tagline: "የፍቅር፣ የጓደኝነት እና የአንድነታችንን ጉዞ የሚያሳይ አጭር የቪዲዮ ትዝታ።"
+  calendar:
+    title: "የግብዣ ወረቀት"
+    heading: "እባክዎን ይመዝገቡ"
+    sub: "ዝገጅቱን በሚገባ እንድናስተካክል እባክዎን እስከ ነሐሴ 10 ቀን 2018 ዓ.ም ድረስ ምላሽዎን ያሳውቁን።"
+  timeline:
+    label: "የሰርጉ እለት"
+    title: "የመርሐግብር ሰሌዳ"
+    events:
+      - id: "t1"
+        time: "ከሰዓት 7:00 ሰዓት"
+        title: "የቃልኪዳን መለዋወጥ ስነ-ስርዓት"
+        description: "ቀለበት በማጥለቅ የሚፈጸም ቅዱስ ስነ-ስርዓት።"
+        iconName: "Heart"
+      - id: "t2"
+        time: "ከሰዓት 9:00 ሰዓት"
+        title: "የመስተንግዶ እና የፎቶ ሰዓት"
+        description: "ልዩ መጠጦች እና መክሰሶች የሚቀርቡበት ወቅት።"
+        iconName: "Wine"
+      - id: "t3"
+        time: "ከምሽቱ 11:30 ሰዓት"
+        title: "የራት ግብዣ እና የምርቃት ስነ-ስርዓት"
+        description: "የሚያምር የራት ግብዣ እና የወላጆች የምርቃት ንግግር።"
+        iconName: "Utensils"
+      - id: "t4"
+        time: "ከምሽቱ 2:00 ሰዓት"
+        title: "የመጀመሪያ ዳንስ እና ጭፈራ"
+        description: "ሙሽሮቹ የዳንስ መድረኩን ከፈቱ! አስደሳች ምሽት።"
+        iconName: "Music"
+  gallery:
+    label: "የፎቶ ማዕከለ-ስዕላት"
+    title: "የእኛ ውብ ትዝታዎች"
+    all: "ሁሉንም አሳይ"
+    engagement: "የማጨጫ ፎቶዎች"
+    adventure: "የእግር ጉዞ"
+    moments: "አስደሳች ጊዜያት"
+    of: "ከ"
+  location:
+    label: "ስነ-ስፍራ"
+    title: "ፈለቀ ተካ የሰርግ አዳራሽ (Feleke Teka Wedding Hall)"
+    pinLabel: "የክብረ በዓሉ አድራሻ"
+    byCarLabel: "በመኪና ለሚመጡ"
+    byCarText: "ደህንነቱ የተጠበቀ የመኪና ማቆሚያ በውብ አዳራሽ ግቢ ተዘጋጅቷል።"
+  memoryShare:
+    label: "ትዝታዎን ያጋሩ"
+    title: "የቴሌግራም የቀጥታ ትዝታ ማዕከል"
+    desc: "እባክዎን በሰርጋችን ቀን የሚያነሱትን ማንኛውንም ድንቅ ፎቶግራፍ በቴሌግራም ግሩፓችን ያጋሩን!"
+    btnText: "የቴሌግራም ግሩፑን ይቀላቀሉ"
+    familyLabel: "የቤተሰብ መዝገብ"
+    familyTitle: "የወላጆች የምርቃት ማስታወሻዎች"
+    familyDesc: "በተወዳጅ ወላጆቻችን የተላለፉ ውድ የምርቃት፣ የጥበብ እና የትዳር ምክሮች ስብስብ።"
+    wishLabel: "ምኞትዎን ይጻፉ"
+    wishTitle: "የእንግዳ ማስታወሻ መጻፊያ"
+    wishDesc: "መልካም ምኞትዎን ከታች ባለው ቅጽ ይጻፉልን። ምክርዎ እና በረከትዎ ለኛ ትልቅ ዋጋ አለው!"
+    inputName: "የእርስዎ ስም"
+    inputEmail: "የእርስዎ የኢሜል አድራሻ"
+    inputWish: "የእንኳን ደስ አላችሁ መልክት"
+    placeholderName: "ለምሳሌ፦ እማሆይ ዘውዲቱ"
+    placeholderEmail: "ለምሳሌ፦ client@domain.com"
+    placeholderWish: "የመመረቂያ ፍቅሮን እዚህ ይጻፉ..."
+    btnSend: "ምኞቴን ላክ"
+    success: "መልካም ምኞትዎ በተሳካ ሁኔታ ተልኳል! ስላደረጉልን ምርቃት እናመሰግናለን።"
+    sending: "በመላክ ላይ..."
+  rsvpForm:
+    fullName: "ሙሉ ስም"
+    fullNamePl: "ለምሳሌ፦ ካትሪን ኢቫንስ"
+    email: "የኢሜል አድራሻ"
+    attendingLabel: "በክብረ በዓሉ ላይ ይገኛሉ?"
+    attendingYes: "በደስታ እገኛለሁ"
+    attendingNo: "በማክበር እቀራለሁ"
+    bringingGuest: "ከእርስዎ ጋር እንግዳ ያመጣሉ?"
+    withGuest: "አዎ፣ ከአንድ አጃቢ ጋር"
+    noGuest: "ብቻዬን እመጣለሁ"
+    partySize: "አጠቃላይ የሰዎች ብዛት"
+    dietary: "የምግብ ፍላጎት ምርጫ"
+    dietaryPl: "ለምሳሌ፦ የእፅዋት ተመጋቢ"
+    song: "ለዳንስ ሙዚቃ ምርጫ"
+    songPl: "የሙዚቃው ርዕስ እና ድምጻዊ"
+    submit: "የምዝገባ ቅጹን ላክ"
+    successHeading: "እናመሰግናለን፣ {name}!"
+    successSub: "ምላሽዎ በተሳካ ሁኔታ ተመዝግቧል"
+    digitalPass: "የዲጂታል መለያ መግቢያ"
+    partyLabel: "የሰው ብዛት"
+    dietaryLabel: "የምግብ ፍላጎት"
+    songLabel: "የተመረጠ ሙዚቃ"
+    editBtn: "መረጃ አስተካክል"
+    saving: "በመመዝገብ ላይ..."
+    sheetStored: "ለጉግል ስፕረድሽት ተልኳል"
+    localStored: "በስልክዎ ላይ ተቀምጧል"

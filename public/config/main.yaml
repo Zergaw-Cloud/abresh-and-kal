@@ -1,0 +1,129 @@
+# Core Wedding Platform Configurations
+
+# Theme and Colors
+theme:
+  primaryColor: "#2f4237"      # High-contrast text, primary buttons, and headers
+  accentColor: "#C5A059"       # key lines, highlight indicators
+  goldColor: "#C5A059"         # used for slider pagination, counters
+  creamColor: "#FAF9F6"        # backdrop background
+  creamDarkColor: "#EAE7DF"    # cards/panels background
+  sageColor: "#9A9587"         # taupe or accent shadows
+  sageLightColor: "#EAE7DF"    # panel backgrounds and borders
+  primaryFont: "Playfair Display" # Display and Heading Font (from Google Fonts)
+  secondaryFont: "Montserrat"     # Technical labels, Navigation and Badge Font
+  bodyFont: "Source Serif 4"      # Readable body narrative and paragraphs
+
+# General Identifier Marks
+monagramInitials: "A&K"
+
+# Timeline & Countdown Target Date
+# Time in ISO-8601 format (e.g. "2026-09-20T16:00:00Z")
+countdownTarget: "2026-09-20T16:00:00Z"
+
+# Address query for geolocating directions
+addressQuery: "Feleke Teka Wedding Hall | ፈለቀ ተካ የሠርግ አዳራሽ"
+
+# Integrations and External URLs
+formspreeId: "xjgzaejz"
+googleSheetsRsvpUrl: "https://script.google.com/macros/s/AKfycbzVuUANOoVp_nqhz1aACI0S1Y717gFpPsWqgKrib-xviJtpQa6aq2RCFezD2uT-0NCT/exec"
+backgroundMusicUrl: "https://www.dropbox.com/scl/fi/iu4xpwcbezemguzfr1g8m/abinet-agonafir-yewune_-1.mp3?rlkey=b6p9kklmexpuqi5hga90kwz8k&st=t2lmd9zb&raw=1"
+youtubeVideoId: "x0U55UcW2Aw"
+telegramUrl: "https://t.me/AbruhasetKalkidanWeddingMemories"
+
+# Webpage Section Toggle Controls and Ordering
+sections:
+  audioPlayer: true
+  story: true
+  countdown: true
+  videoPreview: true
+  saveTheDate: true
+  location: true
+  timeline: true
+  gallery: true
+  memoryShare: true
+  guestbook: true
+  rsvpForm: true
+
+# Section navbar visibility
+sectionConfigs:
+  story:
+    showInNavBar: true
+  countdown:
+    showInNavBar: true
+  videopreview:
+    showInNavBar: true
+  savethedate:
+    showInNavBar: true
+  timeline:
+    showInNavBar: true
+  gallery:
+    showInNavBar: true
+  location:
+    showInNavBar: true
+  memoryshare:
+    showInNavBar: false
+  guestbook:
+    showInNavBar: false
+  rsvpform:
+    showInNavBar: true
+
+# Multi-lingual definition
+multilingual:
+  enabled: true
+  defaultLanguage: "en"
+  languages:
+    - code: "en"
+      label: "EN"
+    - code: "am"
+      label: "አማ"
+
+# Hero slide show images
+heroImages:
+  - "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&q=80&w=1600"
+  - "https://pub-aeff58e1eddc4985935147b02488ea94.r2.dev/header-2.jpeg"
+  - "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&q=80&w=1600"
+  - "https://pub-aeff58e1eddc4985935147b02488ea94.r2.dev/header-4.jpeg"
+
+# Story intro images
+introImages:
+  engagement: "https://pub-aeff58e1eddc4985935147b02488ea94.r2.dev/intro-1.jpeg"
+  adventure: "https://pub-aeff58e1eddc4985935147b02488ea94.r2.dev/intro-2.jpeg"
+
+# Dynamic Carousel Images Definitions without localized titles
+galleryImages:
+  - id: "gal-1"
+    url: "https://pub-aeff58e1eddc4985935147b02488ea94.r2.dev/2.jpeg"
+    category: "moments"
+  - id: "gal-2"
+    url: "https://pub-aeff58e1eddc4985935147b02488ea94.r2.dev/4.jpeg"
+    category: "adventure"
+  - id: "gal-3"
+    url: "https://pub-aeff58e1eddc4985935147b02488ea94.r2.dev/5.jpeg"
+    category: "engagement"
+  - id: "gal-4"
+    url: "https://pub-aeff58e1eddc4985935147b02488ea94.r2.dev/9.jpeg"
+    category: "adventure"
+  - id: "gal-5"
+    url: "https://pub-aeff58e1eddc4985935147b02488ea94.r2.dev/header-2.jpeg"
+    category: "moments"
+  - id: "gal-6"
+    url: "https://pub-aeff58e1eddc4985935147b02488ea94.r2.dev/header-4.jpeg"
+    category: "engagement"
+  - id: "gal-7"
+    url: "https://pub-aeff58e1eddc4985935147b02488ea94.r2.dev/intro-1.jpeg"
+    category: "moments"
+  - id: "gal-8"
+    url: "https://pub-aeff58e1eddc4985935147b02488ea94.r2.dev/intro-2.jpeg"
+    category: "adventure"
+
+# Timeline event images
+timelineImages:
+  t1:
+    - "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800"
+  t2:
+    - "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800"
+  t3:
+    - "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&q=80&w=800"
+  t4:
+    - "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=800"
+

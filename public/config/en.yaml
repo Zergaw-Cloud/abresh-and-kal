@@ -1,0 +1,232 @@
+# English (en) Language Configuration Properties
+
+# Translatable Wedding Characters
+groomName: "Abresh"
+brideName: "Kal"
+weddingDate: "September 20, 2026"
+weddingDateFormatted: "Sunday, Sept 20, 2026"
+weddingTime: "4:00 PM UTC"
+venueName: "Feleke Teka Wedding Hall"
+venueLocation: "Beside Nifas Silk Lafto Technical and Professional Training College"
+venueDescription: "Our wedding ceremony and reception is hosted at the magnificent Feleke Teka Wedding Hall around Nifas Silk Lafto Technical and Professional Training College."
+
+# Section Titles Configuration
+sectionConfigs:
+  story:
+    title: "Our Story"
+    subtitle: "How we began"
+  countdown:
+    title: "The Countdown"
+    subtitle: 'Until We Say "I Do"'
+  videopreview:
+    title: "Our Love Story Captured"
+    subtitle: "Pre-Wedding Moments"
+  savethedate:
+    title: "The Invitation"
+    subtitle: "Reserve the Twentieth of September"
+  timeline:
+    title: "The Wedding Day"
+    subtitle: "Schedule of Events"
+  gallery:
+    title: "Our Memory Bank"
+    subtitle: "Captured Moments"
+  location:
+    title: "The Location"
+    subtitle: "Feleke Teka Wedding Hall"
+  memoryshare:
+    title: "Share Your Memories"
+    subtitle: "Telegram Live Memory Box"
+  guestbook:
+    title: "Leave a Wish"
+    subtitle: "Signing the Guestbook"
+  rsvpform:
+    title: "The Invitation"
+    subtitle: "Kindly Respond"
+
+# Gallery Metadata Translates
+galleryImages:
+  gal-1:
+    title: "Warm Sunlit Smiles"
+    description: "Captured in Addis Ababa, 2025"
+    badge: "MOMENTS"
+  gal-2:
+    title: "Spontaneous Adventures"
+    description: "Our favorite road trips"
+    badge: "ADVENTURE"
+  gal-3:
+    title: "A Golden Promise We Made"
+    description: "The sunset of our love"
+    badge: "ENGAGEMENT"
+  gal-4:
+    title: "Exploring Scenic Horizons Together"
+    description: "Nature escape"
+    badge: "ADVENTURE"
+  gal-5:
+    title: "Gazing Into Our Beautiful Future"
+    description: "Forever in your eyes"
+    badge: "MOMENTS"
+  gal-6:
+    title: "Everlasting Devotion & Faith"
+    description: "The ring of promise"
+    badge: "ENGAGEMENT"
+  gal-7:
+    title: "Everyday Laughter & Coffee"
+    description: "Coffee date morning"
+    badge: "MOMENTS"
+  gal-8:
+    title: "Golden Hour Mountain Escapes"
+    description: "Mount Entoto hills"
+    badge: "ADVENTURE"
+
+# Parent Blessings Registry Translation
+familyRegistryNotes:
+  parent-1:
+    author: "Groom's Father Blessing"
+    text: "We are overjoyed to welcome Kalkidan into our family. May your love be a shining testament of commitment, mutual respect, and infinite blessings."
+    role: "Blessing from Ato Belayhun Keskes"
+  parent-2:
+    author: "Groom's Mother Blessing"
+    text: "May the Almighty bless your home with peace, endless laughter, and understanding. Keep your hearts unified as one, and build a household on sincerity and grace."
+    role: "Blessings from Woizero Almaz Atlaw"
+  parent-3:
+    author: "Bride's Mother Blessing"
+    text: "My heart overflows with love seeing my beautiful Kalkidan and Abruhaset step into this lifetime covenant. May you stand strong together, looking out for each other every single day."
+    role: "Blessings from Woizero Alem Mamo"
+
+# Localized UI Dictionary Translations
+translations:
+  common:
+    and: "and"
+    saveTheDate: "Save the Date"
+    areGettingMarried: "Are Getting Married"
+    rsvpBtn: "RSVP NOW"
+    viewMap: "View Coordinates Map"
+    days: "Days"
+    hours: "Hours"
+    minutes: "Minutes"
+    seconds: "Seconds"
+    languageSelected: "English"
+  hero:
+    storyScroll: "Our Story"
+    saveDate: "Save the Date"
+  nav:
+    story: "Our Story"
+    calendar: "Calendar"
+    timeline: "Timeline"
+    gallery: "Gallery"
+    location: "Location"
+    guestbook: "Guestbook"
+    rsvp: "RSVP"
+    rsvpQuick: "RSVP Now"
+  intro:
+    title: "A Celebration of Love"
+    quote: '"Once in a while, right in the middle of an ordinary life, love gives us a fairy tale."'
+    para1: "We invite you to join us, our most cherished family and friends, as we exchange vows and begin our lifelong journey with one another. Your presence is the greatest gift of all as we embark on this beautiful new chapter together."
+    readBtn: "Read Our Story"
+    closeBtn: "Close Story"
+    photo1Caption: "The moment she said yes"
+    photo2Caption: "Laughter in the countryside"
+    modalTitle: "How We Met & Got Engaged"
+    modalBody1: "<strong>How We Met:</strong> Our paths first crossed in a crowded corner café in Bath. A brief and laughing realization became the foundation of our lifetime."
+    modalBody2: "<strong>The Proposal:</strong> As the setting sun painted the sky in magnificent hues of salmon and soft violet. Under the shadow of an ancient stone archway, he pulled out a ring and asked her to spend the rest of her life with him. She said, 'A thousand times yes!'"
+    modalFooter: '"And so the journey of a lifetime begins."'
+  countdown:
+    heading: 'Until We Say "I Do"'
+    headingHappilyMarried: "Happily Married For"
+    label: "The Countdown"
+    days: "Days"
+    hours: "Hours"
+    minutes: "Minutes"
+    seconds: "Seconds"
+  videoPreview:
+    label: "Our Love Story Captured"
+    title: "Pre-Wedding Moments"
+    tagline: "A cinematic look into our journey of friendship, adventure, and mutual devotion."
+  calendar:
+    title: "The Invitation"
+    heading: "Kindly Respond"
+    sub: "Please respond by August 15, 2026 to help us plan coordinates beautifully."
+  timeline:
+    label: "The Wedding Day"
+    title: "Schedule of Events"
+    events:
+      - id: "t1"
+        time: "1:00 PM"
+        title: "Wedding Vows & Ceremony"
+        description: "The sacred marriage exchange and ring ceremony held in the historic garden."
+        iconName: "Heart"
+      - id: "t2"
+        time: "3:00 PM"
+        title: "Cocktail Reception & Photos"
+        description: "Signature drinks and artisan canapés served fresh upon the lawns."
+        iconName: "Wine"
+      - id: "t3"
+        time: "5:30 PM"
+        title: "Grand Dinner & Toasting"
+        description: "A beautifully curated three-course harvest banquet, accompanied by parental toast."
+        iconName: "Utensils"
+      - id: "t4"
+        time: "8:00 PM"
+        title: "First Dance & Celebration"
+        description: "The newlyweds open the floor! Followed by pop dance numbers and late-night gathering."
+        iconName: "Music"
+  gallery:
+    label: "The Gallery"
+    title: "Our Moments"
+    all: "View All"
+    engagement: "Engagement"
+    adventure: "Adventure"
+    moments: "Wedding Moments"
+    of: "of"
+  location:
+    label: "The Location"
+    title: "Feleke Teka Wedding Hall"
+    pinLabel: "The Venue Location"
+    byCarLabel: "Travel By Vehicle"
+    byCarText: "Secure parking is provided inside the north gates starting at 12:00 PM."
+  memoryShare:
+    label: "Share Your Memories"
+    title: "Telegram Live Memory Box"
+    desc: "Please share all snapshots you capture during our wedding program to our combined Telegram live channel!"
+    btnText: "Join Memory Box Group"
+    familyLabel: "Family Registry"
+    familyTitle: "Family Blessing Notes"
+    familyDesc: "Blessings and wisdom conveyed by our loving parents, preserving generations of love."
+    wishLabel: "Leave a Wish"
+    wishTitle: "Signing the Guestbook"
+    wishDesc: "Write your congratulations note below to send your blessing directly to our live inbox."
+    inputName: "Your Name"
+    inputEmail: "Your Email Address"
+    inputWish: "Congratulatory Wish"
+    placeholderName: "e.g. Grandma Helen"
+    placeholderEmail: "e.g. helen@example.com"
+    placeholderWish: "Writing your warm words here..."
+    btnSend: "Send Love & Wish"
+    success: "Wish posted successfully! Thank you for the blessings."
+    sending: "Sending Wish..."
+  rsvpForm:
+    fullName: "Full Name"
+    fullNamePl: "e.g. Catherine Evans"
+    email: "Email Address"
+    attendingLabel: "Will You Attend?"
+    attendingYes: "Gladly Accepts"
+    attendingNo: "Regretfully Declines"
+    bringingGuest: "Bringing a Guest?"
+    withGuest: "Guest Included"
+    noGuest: "No Plus One"
+    partySize: "Total Party Size"
+    dietary: "Dietary Options"
+    dietaryPl: "e.g. Vegetarian, Gluten-Free"
+    song: "Dance-floor Song Request"
+    songPl: "Song Title & Artist"
+    submit: "Submit RSVP Details"
+    successHeading: "Thank You, {name}!"
+    successSub: "Your response is safely recorded"
+    digitalPass: "DIGITAL RSVP PASS"
+    partyLabel: "PARTY SIZE"
+    dietaryLabel: "DIETARY REQUEST"
+    songLabel: "SONG REQUESTED"
+    editBtn: "Edit Response"
+    saving: "Submitting RSVP..."
+    sheetStored: "Sent to the organizers"
+    localStored: "Saved Offline (Demo Mode)"
