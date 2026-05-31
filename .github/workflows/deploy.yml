@@ -40,7 +40,7 @@ jobs:
         # If deploying to a custom domain, replace the build command with: npm run build
         run: npm run build
         env:
-          VITE_BASE_PATH: "/${{ github.event.repository.name }}/"
+          VITE_BASE_PATH: "/"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
