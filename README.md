@@ -6,7 +6,7 @@ This project was inspired by [YeneSerg](https://www.yeneserg.com), one of the fi
 
 The idea started when a friend of mine was preparing for his wedding and searching for a wedding invitation card printing provider. During that search, we came across YeneSerg and were impressed by what they had built. But, being a tech enthusiast, I took it as a personal challenge. Instead of purchasing their hosted service, I decided to prototype a similar concept with the help of AI and create something tailored for my friend's wedding.
 
-![YeneSerg](readme01.png)
+![YeneSerg](readme/readme01.png)
 
 What began as a fun experiment quickly evolved into a customizable portal for anyone looking for similar thing to use.
 
@@ -14,7 +14,7 @@ What began as a fun experiment quickly evolved into a customizable portal for an
 
 After a few iterations and improvements, the project reached a stage where it felt polished and wedding ready. I then decided to refactor it into a Modern, mobile-friendly, and highly configurable single-page wedding invitation and RSVP portal that anyone can host and use free of charge without any development experience.
 
-![WIRP](readme02.png)
+![WIRP](readme/readme02.png)
 
 ## Features
 
