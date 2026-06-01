@@ -96,7 +96,7 @@ export const DEFAULT_CONFIG: ConfigType = {
   addressQuery: "SKYLIGHT HOTEL GRAND BALLROOM",
   formspreeId: "xxxxxxxx",
   googleSheetsRsvpUrl: "https://script.google.com/macros/s/AKffcfzfuUANOoVp_nqhz1aACI0S1Y717gFpPsWqgKrib-xviJtpfa6aq2RCFezD2uT-0NCT/exec",
-  backgroundMusicUrl: "/public/music/abinet-agonafir-yewune.mp3",
+  backgroundMusicUrl: "https://github.com/TadiosAbebe/wedding-invitation-and-rsvp-portal/raw/refs/heads/main/public/music/abinet-agonafir-yewune.mp3",
   youtubeVideoId: "kebq86BTZFA",
   telegramUrl: "https://t.me/NatiandBettyWeddingMemories",
   sections: {
