@@ -169,16 +169,16 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
             ...DEFAULT_CONFIG.theme,
             ...(parsed.theme || {}),
           },
-          translations: {}, // Reset translations for clean merge from files
-          groomName: {},
-          brideName: {},
-          weddingDate: {},
-          weddingDateFormatted: {},
-          weddingTime: {},
-          venueName: {},
-          venueLocation: {},
-          venueDescription: {},
-          familyRegistryNotes: [],
+          translations: JSON.parse(JSON.stringify(DEFAULT_CONFIG.translations || {})), // Deep-cloned fallback translations
+          groomName: { ...DEFAULT_CONFIG.groomName },
+          brideName: { ...DEFAULT_CONFIG.brideName },
+          weddingDate: { ...DEFAULT_CONFIG.weddingDate },
+          weddingDateFormatted: { ...DEFAULT_CONFIG.weddingDateFormatted },
+          weddingTime: { ...DEFAULT_CONFIG.weddingTime },
+          venueName: { ...DEFAULT_CONFIG.venueName },
+          venueLocation: { ...DEFAULT_CONFIG.venueLocation },
+          venueDescription: { ...DEFAULT_CONFIG.venueDescription },
+          familyRegistryNotes: JSON.parse(JSON.stringify(DEFAULT_CONFIG.familyRegistryNotes || [])),
         };
 
         // Recursive helper to merge translation paths into deep objects
