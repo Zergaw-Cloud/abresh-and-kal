@@ -94,7 +94,7 @@ export const DEFAULT_CONFIG: ConfigType = {
     am: "የሰርግ ስነ-ስርዓታችን እና የእራት ግብዣችን በታላቁና ውብ በሆነው የቦሌ ስካይላይት ሆቴል ይከናወናል።"
   },
   addressQuery: "SKYLIGHT HOTEL GRAND BALLROOM",
-  formspreeId: "xxxxxxxx",
+  formspreeId: "xxxxxxxxx",
   googleSheetsRsvpUrl: "https://script.google.com/macros/s/AKffcfzfuUANOoVp_nqhz1aACI0S1Y717gFpPsWqgKrib-xviJtpfa6aq2RCFezD2uT-0NCT/exec",
   backgroundMusicUrl: "https://github.com/TadiosAbebe/wedding-invitation-and-rsvp-portal/raw/refs/heads/main/public/music/abinet-agonafir-yewune.mp3",
   youtubeVideoId: "kebq86BTZFA",
