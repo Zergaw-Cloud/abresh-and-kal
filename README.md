@@ -1,6 +1,32 @@
 # Wedding Invitation and RSVP Portal
 
-### Inspiration
+- [Wedding Invitation and RSVP Portal](#wedding-invitation-and-rsvp-portal)
+  - [Inspiration](#inspiration)
+  - [The End Product](#the-end-product)
+  - [Features](#features)
+  - [Setup and Deployment](#setup-and-deployment)
+  - [Customization](#customization)
+    - [1. Central Page \& Asset Configurations (`/public/config/main.yaml`)](#1-central-page--asset-configurations-publicconfigmainyaml)
+    - [2. Language-Specific Config File Customization (`/public/config/{lang}.yaml`)](#2-language-specific-config-file-customization-publicconfiglangyaml)
+    - [3. How to Add or Remove a Language from the Site](#3-how-to-add-or-remove-a-language-from-the-site)
+      - [How to Add a New Language (e.g., Spanish - `es`):](#how-to-add-a-new-language-eg-spanish---es)
+      - [How to Remove a Language (e.g., Amharic - `am`):](#how-to-remove-a-language-eg-amharic---am)
+    - [4. Re-theming Colors and Fonts (`/public/config/main.yaml`)](#4-re-theming-colors-and-fonts-publicconfigmainyaml)
+  - [Integrations](#integrations)
+    - [1. RSVP Google Spreadsheet Sync](#1-rsvp-google-spreadsheet-sync)
+      - [Setup Steps:](#setup-steps)
+    - [2. Congratulatory Wishes Guestbook (Formspree)](#2-congratulatory-wishes-guestbook-formspree)
+      - [Setup Steps:](#setup-steps-1)
+    - [3. Live Snapshot Telegram Group](#3-live-snapshot-telegram-group)
+    - [4. Google Analytics Integration](#4-google-analytics-integration)
+  - [Development](#development)
+    - [Project Architecture](#project-architecture)
+    - [Getting Started](#getting-started)
+    - [Testing Suite](#testing-suite)
+      - [Run Unit \& Functional Tests](#run-unit--functional-tests)
+      - [Test Coverage Overview](#test-coverage-overview)
+
+## Inspiration
 
 This project was inspired by [YeneSerg](https://www.yeneserg.com), one of the first digital wedding invitation platforms in Ethiopia.
 
@@ -10,7 +36,7 @@ The idea started when a friend of mine was preparing for his wedding and searchi
 
 What began as a fun experiment quickly evolved into a customizable portal for anyone looking for similar thing to use.
 
-### The End Product
+## The End Product
 
 After a few iterations and improvements, the project reached a stage where it felt polished and wedding ready. I then decided to refactor it into a Modern, mobile-friendly, and highly configurable single-page wedding invitation and RSVP portal that anyone can host and use free of charge without any development experience.
 
@@ -64,6 +90,8 @@ This wedding invitation and RSVP portal comes packed with the following features
 
 <img src="readme/telegram01.png" width="49%" /> <img src="readme/telegram02.png" width="49%" />
 
+- **Google Analytics (GA4)**: Dynamic tracking of guest interactions (language swaps, music playback, map views, guestbook submits, and RSVP actions) along with automated section visibility flow tracing. This provides precise visual performance and engagement insights for the wedding invitations.
+
 - **Calendar Integration**: Highlight the wedding date and allow guests to download an ICS calendar file.
 
 <img src="readme/calendar01.png" width="49%" /> <img src="readme/calendar02.png" width="49%" />
@@ -73,8 +101,22 @@ This wedding invitation and RSVP portal comes packed with the following features
 
 > Every feature listed above is designed to be highly customizable and configurable from a single configuration file: `public/config/main.yaml` This makes it easy to personalize the experience without needing to modify the codebase.
 
+## Setup and Deployment
 
-## How to Customize
+1. Fork this repository.
+2. Enable GitHub Pages on the forked repository, using **GitHub Actions** as the build and deployment source.
+3. Ensure GitHub Actions is enabled for the repository.
+4. Update the configuration files under the `public/config` directory:
+   - Rename and customize the example YAML files to:
+     - `main.yaml`
+     - `am.yaml`
+     - `en.yaml`
+5. Configure your custom domain in GitHub Pages, and add the generated GitHub Pages domain as a CNAME record in your DNS provider.
+   - If you are using the default GitHub Pages domain, update the `.github/workflows` configuration by setting `VITE_BASE_PATH` from `/` to:
+     ```
+     /${{ github.event.repository.name }}/
+     ```
+## Customization 
 
 Nearly all variables can be changed inside modular configuration files under `/public/config/` without modifying any component source code. This keeps configurations clean and less bloated, specifically for multi-lingual and non-multi-lingual invitations alike.
 
@@ -261,9 +303,24 @@ To allow guests to seamlessly share photostream snippets during your wedding pro
    telegramUrl: "https://t.me/YOUR_TELEGRAM_GROUP_LINK"
    ```
 
+### 4. Google Analytics Integration
+To gain real-time performance insights, track traffic sources, and monitor engagement indicators:
+1. Set up a Web data stream in your **Google Analytics 4 (GA4)** console.
+2. Obtain your **Measurement ID** (styled as `G-XXXXXXXXXX`).
+3. Open `/public/config/main.yaml` and place your Measurement ID within the `googleAnalyticsId` field:
+   ```yaml
+   googleAnalyticsId: "G-XXXXXXXXXX"
+   ```
+4. Once configured, the portal will automatically inject standard Google gtag handlers to track:
+   - **Language Switches**: Custom `change_language` event containing the selected language (e.g., `'en'` or `'am'`).
+   - **Audio Player Interactivity**: Custom `play_music` and `pause_music` click operations.
+   - **Interactive Navigation & Map Clicks**: Tracking actions like `load_interactive_map`, `open_google_maps`, and `open_apple_maps`.
+   - **Form Submissions & Funnels**: Seamless tracking of form initiation, success responses, and failures for both the **Guestbook** and the digital **RSVP** boarding pass.
+   - **Section Scroll Depth Visibility**: Automatic `section_view` events fired via standard IntersectionObservers for each section of the single-page invitation (e.g., `story-intro`, `timeline`, `gallery`, `location`, `rsvp`).
+
 ## Development
 
-## Project Architecture
+### Project Architecture
 
 The codebase is organized into modular files. The primary files you need to interact with are:
 
@@ -303,48 +360,46 @@ The codebase is organized into modular files. The primary files you need to inte
 ```
 
 
-## Getting Started
+### Getting Started
 
 To run and build this application locally, ensure you have **Node.js (v18 or higher)** and **npm** installed on your workstation.
 
-### 1. Install Dependencies
+1. Install Dependencies
 Run the following terminal command at the root folder:
 ```bash
 npm install
 ```
 
-### 2. Launch Local Dev Server
+2. Launch Local Dev Server
 Start the development server with Hot Module Replacement on the default port:
 ```bash
 npm run dev
 ```
 Open your browser and navigate to `http://localhost:3000` to preview changes in real-time.
 
-### 3. Verify Code Integrity (Linter)
+3. Verify Code Integrity (Linter)
 Validate syntax, compilation paths, and type-safety of your scripts before committing:
 ```bash
 npm run lint
 ```
 
-### 4. Build for Production
+4. Build for Production
 Bundle the static assets into a minified, lightweight folder in `/dist`:
 ```bash
 npm run build
 ```
 
----
-
-## Testing Suite
+### Testing Suite
 
 To ensure new features, custom localization assets, or component rearrangements do not break critical application logic, the repository includes a complete testing suite using **Vitest**, **React Testing Library**, and **JSDOM**.
 
-### Run Unit & Functional Tests
+#### Run Unit & Functional Tests
 Execute the tests locally in headless run mode:
 ```bash
 npm run test
 ```
 
-### Test Coverage Overview
+#### Test Coverage Overview
 
 The suite covers critical functional requirements of the wedding portal:
 1. **Dynamic Image Optimization (`src/test/imageUtils.test.ts`)**: Confirms Unsplash URLs generate fluid responsive `srcSet` sizes and crop width filters safely while leaving custom self-hosted assets untouched.
@@ -357,16 +412,3 @@ The suite covers critical functional requirements of the wedding portal:
 8. **Congratulatory Guestbook (`src/test/Guestbook.test.tsx`)**: Confirms Formspree API submit handlers, error state banners (e.g. detailed closed form messages), and correct rendering of parental blessing notes.
 
 The test setups in `src/test/setup.ts` intercept DOM environments smoothly, mocking animations (`IntersectionObserver`), layout scrolling behaviors (`HTMLElement.prototype.scrollTo`), audio media buffers (`HTMLMediaElement.prototype.play`), and layout queries (`matchMedia`) so your code is verified purely from command interfaces.
-
-## Deployment Instructions
-
-Because the application compiles down into simple, high-performance static files, you can deploy it to any modern web service for free!
-
-### Option 1: Static Web Hosts (Vercel, Netlify, GitHub Pages)
-1. Run `npm run build` on your local terminal.
-2. Drag and drop the resulting **`dist` folder** into your Vercel or Netlify hosting console dashboard.
-3. Configure your custom wedding domain!
-
-### Option 2: Cloud Storage Buckets (Google Cloud Storage / AWS S3)
-Upload the contents of your build `dist/` folder into an public-read storage bucket and point your custom domain DNS records to load the `index.html` asset directly.
-

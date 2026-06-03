@@ -2,6 +2,7 @@ import React from 'react';
 import { Send, UploadCloud } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { motion } from 'motion/react';
+import { trackEvent } from '../utils/analytics';
 
 export default function MemoryShare({ bgClass }: { bgClass?: string; key?: React.Key }) {
   const { config, language, t } = useLanguage();
@@ -9,6 +10,7 @@ export default function MemoryShare({ bgClass }: { bgClass?: string; key?: React
   if (!config.sections?.memoryShare) return null;
 
   const handleTelegramLink = () => {
+    trackEvent('join_telegram', 'engagement', config.telegramUrl || 'https://t.me/AbruhasetKalkidanWeddingMemories');
     window.open(config.telegramUrl || 'https://t.me/AbruhasetKalkidanWeddingMemories', '_blank');
   };
 

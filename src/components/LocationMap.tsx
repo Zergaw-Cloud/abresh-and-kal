@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MapPin, Compass, Car, Map as MapIcon, ArrowUpRight, Check } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { motion } from 'motion/react';
+import { trackEvent } from '../utils/analytics';
 
 export default function LocationMap({ bgClass }: { bgClass?: string; key?: React.Key }) {
   const { config, language, t } = useLanguage();
@@ -52,7 +53,7 @@ export default function LocationMap({ bgClass }: { bgClass?: string; key?: React
                   {t('location.clickToLoad', 'Click below to load the interactive venue map on this page')}
                 </p>
                 <motion.button
-                  onClick={() => setShowMap(true)}
+                  onClick={() => { setShowMap(true); trackEvent('load_interactive_map', 'navigation', addressQuery); }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                   className="px-6 py-3 rounded-full bg-brand-primary text-white font-sans text-xs uppercase tracking-widest font-semibold shadow-md hover:bg-brand-accent transition-colors duration-300 cursor-pointer focus:outline-none"
@@ -129,6 +130,7 @@ export default function LocationMap({ bgClass }: { bgClass?: string; key?: React
                rel="noopener noreferrer"
                whileHover={{ scale: 1.04 }}
                whileTap={{ scale: 0.98 }}
+               onClick={() => trackEvent('open_google_maps', 'navigation', addressQuery)}
                className="inline-flex items-center justify-center gap-2 border border-[#E5E2D9] hover:border-brand-accent bg-white text-brand-primary px-6 py-2.5 rounded-full font-sans text-[11px] uppercase tracking-widest font-bold transition-all shadow-sm cursor-pointer"
             >
               <MapIcon className="w-3.5 h-3.5 text-brand-accent" />
@@ -142,6 +144,7 @@ export default function LocationMap({ bgClass }: { bgClass?: string; key?: React
                rel="noopener noreferrer"
                whileHover={{ scale: 1.04 }}
                whileTap={{ scale: 0.98 }}
+               onClick={() => trackEvent('open_apple_maps', 'navigation', addressQuery)}
                className="inline-flex items-center justify-center gap-2 border border-[#E5E2D9] hover:border-brand-accent bg-white text-[#4A4A4A] px-6 py-2.5 rounded-full font-sans text-[11px] uppercase tracking-widest font-bold transition-all shadow-sm cursor-pointer"
             >
               <Compass className="w-3.5 h-3.5 text-brand-accent" />

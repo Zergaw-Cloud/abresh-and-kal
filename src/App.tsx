@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AudioPlayer from './components/AudioPlayer';
+import GoogleAnalytics from './components/GoogleAnalytics';
 import Hero from './components/Hero';
 import Intro from './components/Intro';
 import Countdown from './components/Countdown';
@@ -69,6 +70,7 @@ export default function App() {
     <div className="min-h-screen text-brand-primary relative linen-texture selection:bg-brand-accent/20 selection:text-brand-accent">
       
       <AudioPlayer />
+      <GoogleAnalytics />
 
       {/* Elegant Floating Bottom Status Bar */}
       <div className="fixed bottom-6 left-6 z-40 bg-brand-primary/95 backdrop-blur-md text-white border border-[#E5E2D9]/25 px-4 py-2.5 rounded-full text-[10px] sm:text-xs font-sans tracking-widest shadow-xl flex items-center gap-3 animate-fade-in">

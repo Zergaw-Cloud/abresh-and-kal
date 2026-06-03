@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Send, Sparkles, Award } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { motion } from 'motion/react';
+import { trackEvent } from '../utils/analytics';
 
 export default function Guestbook({ bgClass }: { bgClass?: string; key?: React.Key }) {
   const { config, language, t } = useLanguage();
@@ -20,6 +21,7 @@ export default function Guestbook({ bgClass }: { bgClass?: string; key?: React.K
     setIsSubmitting(true);
     setErrorMessage('');
     setShowSuccess(false);
+    trackEvent('guestbook_submit_start', 'conversion', name.trim());
 
     const formspreeEndpoint = `https://formspree.io/f/${config.formspreeId || 'xjgzaejz'}`;
 
@@ -40,13 +42,16 @@ export default function Guestbook({ bgClass }: { bgClass?: string; key?: React.K
         setName('');
         setMessage('');
         setShowSuccess(true);
+        trackEvent('guestbook_submit_success', 'conversion', 'Wish Sent Successfully');
         setTimeout(() => setShowSuccess(false), 6000);
       } else {
         const data = await response.json();
         setErrorMessage(data.error || 'Submission failed.');
+        trackEvent('guestbook_submit_fail', 'conversion', data.error || 'Server Error');
       }
-    } catch (err) {
+    } catch (err: any) {
       setErrorMessage(t('memoryShare.errorGeneric', 'A network error occurred. Please try again.'));
+      trackEvent('guestbook_submit_error', 'conversion', err?.message || 'Network Error');
     } finally {
       setIsSubmitting(false);
     }
