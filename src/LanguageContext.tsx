@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { load as yamlLoad } from 'js-yaml';
 import { DEFAULT_CONFIG, ConfigType } from './config';
+import { trackEvent } from './utils/analytics';
 
 interface LanguageContextType {
   config: ConfigType;
@@ -368,6 +369,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const availableCodes = (config.multilingual?.languages || []).map(l => l.code);
     if (!availableCodes.includes(lang)) return;
     if (lang === language) return;
+
+    trackEvent('change_language', 'engagement', lang);
 
     setIsTransitioning(true);
     setTimeout(() => {

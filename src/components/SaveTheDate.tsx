@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Download, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { motion } from 'motion/react';
+import { trackEvent } from '../utils/analytics';
 
 // Dynamic Calendar Days builder
 const generateCalendarDays = (targetDate: Date) => {
@@ -61,6 +62,7 @@ export default function SaveTheDate({ bgClass }: { bgClass?: string; key?: React
   const weekdays = t('calendar.weekdays', 'Su,Mo,Tu,We,Th,Fr,Sa').split(',');
 
   const handleAddToCalendar = () => {
+    trackEvent('add_to_calendar', 'engagement', `${groom} & ${bride} Wedding`);
     const formatToICS = (d: Date) => {
       const pad = (n: number) => n.toString().padStart(2, '0');
       return `${d.getUTCFullYear()}${pad(d.getUTCMonth() + 1)}${pad(d.getUTCDate())}T${pad(d.getUTCHours())}${pad(d.getUTCMinutes())}${pad(d.getUTCSeconds())}Z`;

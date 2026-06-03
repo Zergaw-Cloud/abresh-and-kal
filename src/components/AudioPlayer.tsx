@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { motion, AnimatePresence } from 'motion/react';
+import { trackEvent } from '../utils/analytics';
 
 export default function AudioPlayer() {
   const { config } = useLanguage();
@@ -84,10 +85,14 @@ export default function AudioPlayer() {
       audio.pause();
       setIsPlaying(false);
       playbackRequestedRef.current = false;
+      trackEvent('pause_music', 'interaction', 'Background Track');
     } else {
       playbackRequestedRef.current = true;
       audio.play()
-        .then(() => setIsPlaying(true))
+        .then(() => {
+          setIsPlaying(true);
+          trackEvent('play_music', 'interaction', 'Background Track');
+        })
         .catch(() => handleAudioError());
     }
   };

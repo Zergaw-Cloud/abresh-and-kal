@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Music, Heart, CheckCircle2, Ticket, Users, RefreshCw } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { motion, AnimatePresence } from 'motion/react';
+import { trackEvent } from '../utils/analytics';
 
 export default function RsvpForm({ bgClass }: { bgClass?: string; key?: React.Key }) {
   const { config, language, t } = useLanguage();
@@ -35,6 +36,7 @@ export default function RsvpForm({ bgClass }: { bgClass?: string; key?: React.Ke
     if (!fullName.trim() || attending === null) return;
 
     setIsSubmitting(true);
+    trackEvent('rsvp_submit_start', 'conversion', `Attending: ${attending}`);
 
     const randomTicketSuffix = Math.floor(1000 + Math.random() * 9000);
     const passCode = savedRsvp?.invitationCode || `AK-${attending === 'yes' ? 'YES' : 'NO'}-${randomTicketSuffix}`;
@@ -77,6 +79,7 @@ export default function RsvpForm({ bgClass }: { bgClass?: string; key?: React.Ke
         saveToLocalStorageAll('local');
         setIsSubmitting(false);
         setIsSubmitted(true);
+        trackEvent('rsvp_submit_success', 'conversion', `Attending: ${attending} (local placeholder)`);
       }, 1000);
     } else {
       try {
@@ -96,11 +99,13 @@ export default function RsvpForm({ bgClass }: { bgClass?: string; key?: React.Ke
         setBackendStatus('sheet');
         saveToLocalStorageAll('sheet');
         setIsSubmitted(true);
-      } catch {
+        trackEvent('rsvp_submit_success', 'conversion', `Attending: ${attending} (google_sheet)`);
+      } catch (err: any) {
         saveRsvpLocally(payload);
         setBackendStatus('local');
         saveToLocalStorageAll('local');
         setIsSubmitted(true);
+        trackEvent('rsvp_submit_success', 'conversion', `Attending: ${attending} (local fallback due to sheets error: ${err?.message || 'Error'})`);
       } finally {
         setIsSubmitting(false);
       }
@@ -117,6 +122,7 @@ export default function RsvpForm({ bgClass }: { bgClass?: string; key?: React.Ke
   };
 
   const resetForm = () => {
+    trackEvent('rsvp_reset', 'interaction');
     try {
       localStorage.removeItem('wedding_user_rsvp');
     } catch {}

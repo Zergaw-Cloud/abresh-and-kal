@@ -20,6 +20,7 @@ export interface ConfigType {
   backgroundMusicUrl: string;
   youtubeVideoId: string;
   telegramUrl: string;
+  googleAnalyticsId?: string;
   sections: {
     audioPlayer: boolean;
     story: boolean;
@@ -99,6 +100,7 @@ export const DEFAULT_CONFIG: ConfigType = {
   backgroundMusicUrl: "https://github.com/TadiosAbebe/wedding-invitation-and-rsvp-portal/raw/refs/heads/main/public/music/abinet-agonafir-yewune.mp3",
   youtubeVideoId: "kebq86BTZFA",
   telegramUrl: "https://t.me/NatiandBettyWeddingMemories",
+  googleAnalyticsId: "",
   sections: {
     audioPlayer: true,
     story: true,

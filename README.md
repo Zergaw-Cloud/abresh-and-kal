@@ -18,6 +18,7 @@
     - [2. Congratulatory Wishes Guestbook (Formspree)](#2-congratulatory-wishes-guestbook-formspree)
       - [Setup Steps:](#setup-steps-1)
     - [3. Live Snapshot Telegram Group](#3-live-snapshot-telegram-group)
+    - [4. Google Analytics Integration](#4-google-analytics-integration)
   - [Development](#development)
     - [Project Architecture](#project-architecture)
     - [Getting Started](#getting-started)
@@ -88,6 +89,8 @@ This wedding invitation and RSVP portal comes packed with the following features
 - **Telegram Group Integration**: Redirect guests to a configured Telegram group to share memories and stay connected.
 
 <img src="readme/telegram01.png" width="49%" /> <img src="readme/telegram02.png" width="49%" />
+
+- **Google Analytics (GA4)**: Dynamic tracking of guest interactions (language swaps, music playback, map views, guestbook submits, and RSVP actions) along with automated section visibility flow tracing. This provides precise visual performance and engagement insights for the wedding invitations.
 
 - **Calendar Integration**: Highlight the wedding date and allow guests to download an ICS calendar file.
 
@@ -299,6 +302,21 @@ To allow guests to seamlessly share photostream snippets during your wedding pro
    ```yaml
    telegramUrl: "https://t.me/YOUR_TELEGRAM_GROUP_LINK"
    ```
+
+### 4. Google Analytics Integration
+To gain real-time performance insights, track traffic sources, and monitor engagement indicators:
+1. Set up a Web data stream in your **Google Analytics 4 (GA4)** console.
+2. Obtain your **Measurement ID** (styled as `G-XXXXXXXXXX`).
+3. Open `/public/config/main.yaml` and place your Measurement ID within the `googleAnalyticsId` field:
+   ```yaml
+   googleAnalyticsId: "G-XXXXXXXXXX"
+   ```
+4. Once configured, the portal will automatically inject standard Google gtag handlers to track:
+   - **Language Switches**: Custom `change_language` event containing the selected language (e.g., `'en'` or `'am'`).
+   - **Audio Player Interactivity**: Custom `play_music` and `pause_music` click operations.
+   - **Interactive Navigation & Map Clicks**: Tracking actions like `load_interactive_map`, `open_google_maps`, and `open_apple_maps`.
+   - **Form Submissions & Funnels**: Seamless tracking of form initiation, success responses, and failures for both the **Guestbook** and the digital **RSVP** boarding pass.
+   - **Section Scroll Depth Visibility**: Automatic `section_view` events fired via standard IntersectionObservers for each section of the single-page invitation (e.g., `story-intro`, `timeline`, `gallery`, `location`, `rsvp`).
 
 ## Development
 
