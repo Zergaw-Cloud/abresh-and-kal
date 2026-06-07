@@ -81,9 +81,9 @@ export interface ConfigType {
 }
 
 export const DEFAULT_CONFIG: ConfigType = {
-  groomName: { en: "Nati", am: "ናቲ" },
-  brideName: { en: "Betty", am: "ቤቲ" },
-  monagramInitials: "B&A",
+  groomName: { en: "Groom", am: "ሙሽራ" },
+  brideName: { en: "Bride", am: "ሙሽሪት" },
+  monagramInitials: "G&B",
   countdownTarget: "2027-09-20T16:00:00Z",
   weddingDate: { en: "September 20, 2027", am: "መስከረም 10 ቀን 2020 ዓ.ም" },
   weddingDateFormatted: { en: "Monday, Sept 20, 2027", am: "ሰኞ፣ መስከረም 10 ቀን 2020" },
@@ -99,7 +99,7 @@ export const DEFAULT_CONFIG: ConfigType = {
   googleSheetsRsvpUrl: "https://script.google.com/macros/s/AKffcfzfuUANOoVp_nqhz1aACI0S1Y717gFpPsWqgKrib-xviJtpfa6aq2RCFezD2uT-0NCT/exec",
   backgroundMusicUrl: "https://github.com/TadiosAbebe/wedding-invitation-and-rsvp-portal/raw/refs/heads/main/public/music/abinet-agonafir-yewune.mp3",
   youtubeVideoId: "kebq86BTZFA",
-  telegramUrl: "https://t.me/NatiandBettyWeddingMemories",
+  telegramUrl: "https://t.me/GroomAndBrideWeddingMemories",
   googleAnalyticsId: "",
   sections: {
     audioPlayer: true,
@@ -271,26 +271,26 @@ export const DEFAULT_CONFIG: ConfigType = {
     {
       id: "parent-1",
       author: { en: "Groom's Father Blessing", am: "የሙሽራው አባት ምርቃት" },
-      text: { en: "We are overjoyed to welcome the bride into our family. May your love be a shining testament of commitment, mutual respect, and infinite blessings.", am: "ቤቲን ወደ ቤተሰባችን በመቀበላችን ታላቅ ደስታ ይሰማናል። ፍቅራችሁ የጽናት፣ የመከባበር እና የዘላቂ በረከት ማረጋገጫ ይሁን።" },
-      role: { en: "Blessing from Ato Moges Mekasha", am: "የአቶ ሞገስ መካሻ ምርቃት" }
+      text: { en: "We are overjoyed to welcome the bride into our family. May your love be a shining testament of commitment, mutual respect, and infinite blessings.", am: "ሙሽሪትን ወደ ቤተሰባችን በመቀበላችን ታላቅ ደስታ ይሰማናል። ፍቅራችሁ የጽናት፣ የመከባበር እና የዘላቂ በረከት ማረጋገጫ ይሁን።" },
+      role: { en: "Groom's Father", am: "የሙሽራው አባት" }
     },
     {
       id: "parent-2",
       author: { en: "Groom's Mother Blessing", am: "የሙሽራው እናት ምርቃት" },
       text: { en: "May the Almighty bless your home with peace, endless laughter, and understanding. Keep your hearts unified as one, and build a household on sincerity and grace.", am: "ፈጣሪ ቤታችሁን በሰላም፣ በሳቅ እና በምክክር ይባርከው። ልባችሁን በአንድነት አጽኑ፤ ትዳራችሁን በቅንነት እና በሞገስ ገንቡ።" },
-      role: { en: "Blessings from Woizero Almaz Atlaw", am: "የወይዘሮ አልማዝ አጥላው ምርቃት" }
+      role: { en: "Groom's Mother", am: "የሙሽራው እናት" }
     },
     {
       id: "parent-3",
       author: { en: "Bride's Mother Blessing", am: "የሙሽሪት እናት ምርቃት" },
-      text: { en: "My heart overflows with love seeing my beautiful daughter and the groom step into this lifetime covenant. May you stand strong together, looking out for each other every single day.", am: "ልጄ ቤቲ እና ናቲ ይህንን የተቀደሰ የህይወት ቃልኪዳን ሲገቡ በማየቴ ልቤ በደስታ ይፈሳል። ሁልጊዜም እርስ በርስ እየተከባበራችሁና እየተደጋገፋችሁ በጽናት ቁሙ።" },
-      role: { en: "Blessings from Woizero Alem Mamo", am: "ወ/ሮ አለም ማሞ - ጎርፌ ምርቃት" }
+      text: { en: "My heart overflows with love seeing my beautiful daughter and the groom step into this lifetime covenant. May you stand strong together, looking out for each other every single day.", am: "ልጄ እና ሙሽራው ይህንን የተቀደሰ የህይወት ቃልኪዳን ሲገቡ በማየቴ ልቤ በደስታ ይፈሳል። ሁልጊዜም እርስ በርስ እየተከባበራችሁና እየተደጋገፋችሁ በጽናት ቁሙ።" },
+      role: { en: "Bride's Mother", am: "የሙሽሪት እናት" }
     },
     {
       id: "parent-4",
       author: { en: "Bride's Father Blessing", am: "የሙሽሪት አባት ምርቃት" },
-      text: { en: "My the next phase of your life be filled with joy and blessing.", am: "ቀጣዩ የህይወት ምዕራፋችሁ በደስታና በበረከት የተሞላ ይሁን።" },
-      role: { en: "Blessings from Ato Atnafu Abebe", am: "የአቶ አጥናፉ አበበ ምርቃት" }
+      text: { en: "May the next phase of your life be filled with joy and blessing.", am: "ቀጣዩ የህይወት ምዕራፋችሁ በደስታና በበረከት የተሞላ ይሁን።" },
+      role: { en: "Bride's Father", am: "የሙሽሪት አባት" }
     }
   ],
   translations: {
