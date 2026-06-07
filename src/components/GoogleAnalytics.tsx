@@ -11,6 +11,22 @@ export default function GoogleAnalytics() {
       return;
     }
 
+    // Initialize global dataLayer and gtag function first before appending the script
+    window.dataLayer = window.dataLayer || [];
+    if (!window.gtag) {
+      window.gtag = function () {
+        // eslint-disable-next-line prefer-rest-params
+        window.dataLayer?.push(arguments);
+      };
+    }
+
+    window.gtag('js', new Date());
+    window.gtag('config', measurementId, {
+      page_path: window.location.pathname,
+      page_title: document.title,
+      language: language,
+    });
+
     const scriptId = 'ga-gtag-script';
     let script = document.getElementById(scriptId) as HTMLScriptElement;
 
@@ -21,19 +37,6 @@ export default function GoogleAnalytics() {
       script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
       document.head.appendChild(script);
     }
-
-    // Initialize global gtag function
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function (...args: any[]) {
-      window.dataLayer?.push(args);
-    };
-
-    window.gtag('js', new Date());
-    window.gtag('config', measurementId, {
-      page_path: window.location.pathname,
-      page_title: document.title,
-      language: language,
-    });
 
     console.log(`[Google Analytics] Configured for Measurement ID: ${measurementId}`);
   }, [measurementId]);
