@@ -82,7 +82,7 @@ galleryImages:
 familyRegistryNotes:
   parent-1:
     author: "Groom's Father Blessing"
-    text: "We are overjoyed to welcome Kalkidan into our family. May your love be a shining testament of commitment, mutual respect, and infinite blessings."
+    text: "We are overjoyed to welcome Selenat into our family. May your love be a shining testament of commitment, mutual respect, and infinite blessings."
     role: "Blessing from Ato Belayhun Keskes"
   parent-2:
     author: "Groom's Mother Blessing"
@@ -127,7 +127,7 @@ translations:
     photo1Caption: "The moment she said yes"
     photo2Caption: "Laughter in the countryside"
     modalTitle: "How We Met & Got Engaged"
-    modalBody1: "<strong>How We Met:</strong> Our paths first crossed in a crowded corner café in Bath. A brief and laughing realization became the foundation of our lifetime."
+    modalBody1: "<strong>How We Met:</strong> We met at the Admas University Waleleng building, and we both forgot our IDs. I had a presentation and she had an exam. We started talking. The teacher took her to the exam center. We didn't exchange phone numbers. She went in. After 2 months, we met there. We exchanged phone numbers. The phone calls started and the meeting continued. We ended up here with the permission of the Virgin Mary."
     modalBody2: "<strong>The Proposal:</strong> As the setting sun painted the sky in magnificent hues of salmon and soft violet. Under the shadow of an ancient stone archway, he pulled out a ring and asked her to spend the rest of her life with him. She said, 'A thousand times yes!'"
     modalFooter: '"And so the journey of a lifetime begins."'
   countdown:
@@ -151,17 +151,17 @@ translations:
     title: "Schedule of Events"
     events:
       - id: "t1"
-        time: "1:00 PM"
+        time: "2:30 PM"
         title: "Wedding Vows & Ceremony"
         description: "The sacred marriage exchange and ring ceremony held in the historic garden."
         iconName: "Heart"
       - id: "t2"
-        time: "3:00 PM"
+        time: "9:00 PM"
         title: "Cocktail Reception & Photos"
         description: "Signature drinks and artisan canapés served fresh upon the lawns."
         iconName: "Wine"
       - id: "t3"
-        time: "5:30 PM"
+        time: "7:30 PM"
         title: "Grand Dinner & Toasting"
         description: "A beautifully curated three-course harvest banquet, accompanied by parental toast."
         iconName: "Utensils"
